@@ -6,6 +6,14 @@ Desafio do curso Full Cycle 3.0
 
 https://hub.docker.com/r/brunocicom/fc-docker-desafiogo
 
+# Imagem Full Cycle Rocks
+
+Executar docker de produção
+
+``` bash
+docker run --rm brunocicom/fc-docker-desafiogo:prod
+```
+
 # Anotações de trabalho
 
 WORKDIR: go

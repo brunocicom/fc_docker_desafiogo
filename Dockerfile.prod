@@ -1,0 +1,10 @@
+FROM golang:1.13.0 as builder
+WORKDIR /go/src
+COPY . .
+RUN env GOOS=linux GOARCH=386 go build .
+
+
+# image prod
+FROM scratch
+COPY --from=builder /go/src/fc-docker-desafiogo .
+ENTRYPOINT [ "./fc-docker-desafiogo" ]
